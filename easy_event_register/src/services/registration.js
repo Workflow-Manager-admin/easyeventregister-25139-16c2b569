@@ -12,7 +12,7 @@ class RegistrationService {
 
     const registeredAt = new Date().toISOString();
     const result = await run(
-      `INSERT INTO registrations (event_id, name, email, registered_at) VALUES (?, ?, ?, ?)`,
+      'INSERT INTO registrations (event_id, name, email, registered_at) VALUES (?, ?, ?, ?)',
       [eventId, name, email, registeredAt]
     );
     return { id: result.lastID, eventId, name, email, registeredAt };
