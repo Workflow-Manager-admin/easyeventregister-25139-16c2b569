@@ -22,7 +22,7 @@ class RegistrationService {
   // PUBLIC_INTERFACE
   async getRegistrationsForEvent(eventId) {
     return all(
-      `SELECT id, name, email, registered_at FROM registrations WHERE event_id = ? ORDER BY registered_at DESC`,
+      'SELECT id, name, email, registered_at FROM registrations WHERE event_id = ? ORDER BY registered_at DESC',
       [eventId]
     );
   }
