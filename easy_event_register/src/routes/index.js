@@ -2,7 +2,9 @@ const express = require('express');
 const healthController = require('../controllers/health');
 
 const router = express.Router();
-// Health endpoint
+
+router.use('/events', require('./events'));
+router.use('/register', require('./registration'));
 
 /**
  * @swagger
